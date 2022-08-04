@@ -1,0 +1,17 @@
+.profile__edit-btn {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	border: 1px solid #fff;
+	background-color: #000;
+	background-image: url(../../../images/icons/edit-icon.svg);
+	background-size: 7.5px;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 0;
+	min-width: 18px;
+	min-height: 18px;
+	align-self: center;
+	grid-column: 2;
+}
