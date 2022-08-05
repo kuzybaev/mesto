@@ -1,8 +1,4 @@
-.profile__edit-btn {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	cursor: pointer;
+.btn_type_edit {
 	border: 1px solid #fff;
 	background-color: #000;
 	background-image: url(../../../images/icons/edit-icon.svg);
@@ -13,5 +9,12 @@
 	min-width: 18px;
 	min-height: 18px;
 	align-self: center;
-	grid-column: 2;
+}
+
+@media screen and (min-width: 768px) {
+	.btn_type_edit {
+		min-width: 24px;
+		min-height: 24px;
+		background-size: 10px;
+	}
 }

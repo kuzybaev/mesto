@@ -19,22 +19,68 @@
 				<img src="./images/avatar.jpg" alt="Жак-Ив Кусто" class="profile__image">
 				<div class="profile__info">
 					<h1 class="profile__name">Жак-Ив Кусто</h1>
-					<button class="profile__edit-btn"></button>
+					<button class="btn btn_type_edit"></button>
 					<p class="profile__description">Исследователь океана</p>
 				</div>
-				<button class="profile__add-btn"></button>
+				<button class="btn btn_type_add"></button>
 			</section>
 			<section class="cards">
 				<figure class="card">
-					<img class="card__image" src="./images/kirill-pershin-1088404-unsplash.jpg">
+					<img class="card__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Крепость">
 					<figcaption class="card__caption">
-						<h2 class="card__title"></h2>
-						<img class="card__icon" src="./images/icons/like-icon.svg">
+						<h2 class="card__title">Карачаевск</h2>
+						<button class="card__icon"></button>
+					</figcaption>
+				</figure>
+				<figure class="card">
+					<img class="card__image" src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Предгорье">
+					<figcaption class="card__caption">
+						<h2 class="card__title">Гора Эльбрус</h2>
+						<button class="card__icon"></button>
+					</figcaption>
+				</figure>
+				<figure class="card">
+					<img class="card__image" src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Горная вершина">
+					<figcaption class="card__caption">
+						<h2 class="card__title">Домбай</h2>
+						<button class="card__icon"></button>
+					</figcaption>
+				</figure>
+				<figure class="card">
+					<img class="card__image" src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Предгорье">
+					<figcaption class="card__caption">
+						<h2 class="card__title">Гора Эльбрус</h2>
+						<button class="card__icon"></button>
+					</figcaption>
+				</figure>
+				<figure class="card">
+					<img class="card__image" src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Горная вершина">
+					<figcaption class="card__caption">
+						<h2 class="card__title">Домбай</h2>
+						<button class="card__icon"></button>
+					</figcaption>
+				</figure>
+				<figure class="card">
+					<img class="card__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Крепость">
+					<figcaption class="card__caption">
+						<h2 class="card__title">Карачаево-Черкессия</h2>
+						<button class="card__icon"></button>
 					</figcaption>
 				</figure>
 			</section>
 		</main>
-		<footer class="footer"></footer>
+		<div class="pop-up">
+			<button class="btn btn_type_close"></button>
+			<form class="pop-up__form">
+				<h2 class="pop-up__title">Редактировать профиль</h2>
+				<input class="pop-up__input pop-up__input_type_name" type="text" value="Жак-Ив Кусто">
+				<input class="pop-up__input pop-up__input_type_info" type="text" value="Ученый">
+				<button class="btn btn_type_submit" type="submit"></button>
+			</form>
+		</div>
+		<footer class="footer">
+			<p class="footer__title">&copy; 2022 Mesto Russia</p>
+		</footer>
 	</div>
 	<script src="./scripts/script.js"></script>
 </body>
