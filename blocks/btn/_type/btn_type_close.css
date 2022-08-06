@@ -1,3 +1,12 @@
 .btn_type_close {
-	
+	position: absolute;
+	top: -36px;
+	right: 0;
+	min-width: 20px;
+	min-height: 20px;
+	background: none;
+	background-image: url(../../../images/icons/clos-icon.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }

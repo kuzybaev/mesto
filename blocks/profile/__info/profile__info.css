@@ -2,19 +2,21 @@
 	margin: 0 auto;
 	margin-bottom: 36px;
 	max-width: 282px;
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: 1fr 18px;
+	justify-items: center;
 	column-gap: 10px;
 	row-gap: 14px;
-	justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
 	.profile__info {
 		margin: 0;
+		grid-template-columns: 1fr 24px;
 		max-width: 336px;
 		row-gap: 16px;
 		column-gap: 18px;
 		align-content: center;
+		justify-items: start;
 	}
 }
