@@ -8,9 +8,10 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
+	grid-area: name;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
 	.profile__name {
 		font-size: 42px;
 		line-height: 48px;

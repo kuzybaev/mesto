@@ -7,10 +7,17 @@
 	background-position: center;
 	min-width: 18px;
 	min-height: 18px;
+	justify-self: start;
 	align-self: center;
+	grid-area: button;
+	transition: opacity ease .2s;
 }
 
-@media screen and (min-width: 768px) {
+.btn_type_edit:hover {
+	opacity: 0.6;
+}
+
+@media screen and (min-width: 769px) {
 	.btn_type_edit {
 		min-width: 24px;
 		min-height: 24px;

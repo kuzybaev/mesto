@@ -1,3 +1,24 @@
-.button_type_submit {
-	
+.btn_type_submit {
+	min-width: 238px;
+    min-height: 46px;
+    background: #000;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 14px;
+    line-height: 17px;
+    border-radius: 2px;
+    transition: opacity ease .2s;
+}
+
+.btn_type_submit:hover {
+    opacity: 0.8;
+}
+
+@media screen and (min-width: 769px){
+    .btn_type_submit {
+        font-size: 18px;
+        line-height: 22px;
+        min-width: 358px;
+        min-height: 50px;
+    }
 }

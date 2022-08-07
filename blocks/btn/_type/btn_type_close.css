@@ -4,9 +4,21 @@
 	right: 0;
 	min-width: 20px;
 	min-height: 20px;
-	background: none;
-	background-image: url(../../../images/icons/clos-icon.svg);
 	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+	background: url(../../../images/icons/clos-icon.svg) no-repeat center;
+	transition: opacity ease .2s;
+}
+
+.btn_type_close:hover {
+	opacity: 0.6;
+}
+
+
+@media screen and (min-width: 769px){
+	.btn_type_close {
+		min-width: 32px;
+		min-height: 32px;
+		right: -40px;
+		top: -40px;
+	}
 }

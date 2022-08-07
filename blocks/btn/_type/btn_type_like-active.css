@@ -1,0 +1,10 @@
+.btn_type_like-active {
+	min-height: 19px;
+	min-width: 22px;
+	background-image: url(../../../images/icons/like-active.svg);
+	transition: opacity ease .2s;
+}
+
+.btn_type_like-active:hover {
+	opacity: 0.5;
+}

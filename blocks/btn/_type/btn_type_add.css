@@ -2,15 +2,21 @@
 	margin: 0 auto;
 	min-width: 282px;
 	min-height: 50px;
-	border: 1px solid #fff;
+	border: 2px solid #fff;
+	border-radius: 2px;
 	background-color: #000;
 	background-image: url(../../../images/icons/add-icon.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 16px;
+	transition: opacity ease .2s;
 }
 
-@media screen and (min-width: 768px) {
+.btn_type_add:hover {
+	opacity: 0.6;
+}
+
+@media screen and (min-width: 769px) {
 	.btn_type_add {
 		min-width: 150px;
 		max-height: 50px;

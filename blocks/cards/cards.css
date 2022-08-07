@@ -12,7 +12,7 @@
 	row-gap: 20px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
 	.cards {
 		padding-top: 50px;
 	}
