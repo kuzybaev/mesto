@@ -5,7 +5,9 @@
 	min-width: 20px;
 	min-height: 20px;
 	background-size: cover;
-	background: url(../../../images/icons/clos-icon.svg) no-repeat center;
+	background-image: url(../../../images/icons/clos-icon.svg);
+	background-position: center;
+	background-repeat: no-repeat;
 	transition: opacity ease .2s;
 }
 
