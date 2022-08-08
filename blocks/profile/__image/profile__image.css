@@ -3,6 +3,7 @@
 	max-width: 120px;
 	display: block;
 	margin-bottom: 26px;
+	object-fit: cover;
 }
 
 @media screen and (min-width: 769px) {

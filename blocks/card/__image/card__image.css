@@ -1,5 +1,7 @@
 .card__image {
 	display: block;
+	min-height: 282px;
+	max-height: 282px;
 	width: 100%;
 	object-fit: cover;
 }
