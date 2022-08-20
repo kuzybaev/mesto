@@ -1,25 +1,27 @@
+//buttons on initial page
+const editButton = document.querySelector('.btn_type_edit');
+const addButton = document.querySelector('.btn_type_add');
+const deleteButton = document.querySelector('.btn_type_delete');
+const likeButton = document.querySelector('.btn_type_like');
+
+//popup elements
 const popUp = document.querySelector('.pop-up')
-const editButton = document.querySelector('.btn_type_edit')
-const closeButton = popUp.querySelector('.btn_type_close')
 const popUpContainer = popUp.querySelector('.pop-up__container')
 const popUpForm = popUpContainer.querySelector('.pop-up__form')
-let nameInput = popUpForm.querySelector('.pop-up__input_type_name')
-let infoInput = popUpForm.querySelector('.pop-up__input_type_info')
-const profileInfo = document.querySelector('.profile__info')
-let profileName = profileInfo.querySelector('.profile__name')
-let profileDescription = profileInfo.querySelector('.profile__description')
+const nameInput = popUpForm.querySelector('.pop-up__input_type_name')
+const infoInput = popUpForm.querySelector('.pop-up__input_type_info')
 
-const togglePopUp = function () {
-    if (!popUp.classList.contains('pop-up_open')) {
-        nameInput.value = profileName.textContent
-        infoInput.value = profileDescription.textContent
-    }
+//popup buttons
+const closeButton = popUp.querySelector('.btn_type_close')
+
+//profile information elements
+const profileInfo = document.querySelector('.profile__info')
+const profileName = profileInfo.querySelector('.profile__name')
+const profileDescription = profileInfo.querySelector('.profile__description')
+
+function togglePopUp () {
     popUp.classList.toggle('pop-up_open')
 }
-//Уважаемый ревьюер, привет! Исправил согласно вашему замечанию,
-//но, к сожалению, не особо понял саму строчку с методом контейнс.
-//Логика в принципе ясна, только вот зачем надо ставить ! - не понимаю :)
-//Буду благодарен, если вы объясните зачем нужен этот оператор. 
 
 function formSubmitHandler (evt) {
     evt.preventDefault()
@@ -28,9 +30,16 @@ function formSubmitHandler (evt) {
     togglePopUp()
 }
 
-editButton.addEventListener('click', togglePopUp)
-closeButton.addEventListener('click', togglePopUp)
-popUpForm.addEventListener('submit', formSubmitHandler)
+editButton.addEventListener('click', function togglePopUp() {
+    popUp.classList.toggle('pop-up_open');
+    if (popUp.classList.contains('pop-up_open')) {
+        nameInput.value = profileName.textContent;
+        infoInput.value = profileDescription.textContent;
+    }
+});
+addButton.addEventListener('click', togglePopUp);
+closeButton.addEventListener('click', togglePopUp);
+popUpForm.addEventListener('submit', formSubmitHandler);
 
 
 

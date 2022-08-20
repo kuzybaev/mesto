@@ -1,0 +1,13 @@
+.btn_type_delete {
+    min-height: 19px;
+    min-width: 18px;
+    background-image: url(../../../images/icons/trash-icon.svg);
+    transition: opacity ease .2s;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.btn_type_delete:hover {
+    opacity: 0.6;
+}
