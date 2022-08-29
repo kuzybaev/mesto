@@ -1,45 +1,117 @@
-//buttons on initial page
-const editButton = document.querySelector('.btn_type_edit');
-const addButton = document.querySelector('.btn_type_add');
-const deleteButton = document.querySelector('.btn_type_delete');
-const likeButton = document.querySelector('.btn_type_like');
+'use strict';
 
-//popup elements
-const popUp = document.querySelector('.pop-up')
-const popUpContainer = popUp.querySelector('.pop-up__container')
-const popUpForm = popUpContainer.querySelector('.pop-up__form')
-const nameInput = popUpForm.querySelector('.pop-up__input_type_name')
-const infoInput = popUpForm.querySelector('.pop-up__input_type_info')
+/* variables*/
+//global variables
+const page = document.querySelector('.page');
+const editPopup = page.querySelector('.pop-up_type_edit');
+const addPopup = page.querySelector('.pop-up_type_add');
+const popupEditForm = editPopup.querySelector('.pop-up__form');
+const popupAddForm = addPopup.querySelector('.pop-up__form');
+const profileName = page.querySelector('.profile__name');
+const profileBio = page.querySelector('.profile__description');
 
-//popup buttons
-const closeButton = popUp.querySelector('.btn_type_close')
+//buttons variables
+const editButton = page.querySelector('.btn_type_edit');
+const addButton = page.querySelector('.btn_type_add');
+const closeEditPopup = editPopup.querySelector('.btn_type_close');
+const closeAddPopup = addPopup.querySelector('.btn_type_close');
 
-//profile information elements
-const profileInfo = document.querySelector('.profile__info')
-const profileName = profileInfo.querySelector('.profile__name')
-const profileDescription = profileInfo.querySelector('.profile__description')
+//inputs variables
+const inputName = editPopup.querySelector('.pop-up__input_type_name');
+const inputBio = editPopup.querySelector('.pop-up__input_type_info');
+const inputPlace = addPopup.querySelector('.pop-up__input_type_place-name');
+const inputLink = addPopup.querySelector('.pop-up__input_type_image-source');
 
-function togglePopUp () {
-    popUp.classList.toggle('pop-up_open')
-}
-
-function formSubmitHandler (evt) {
-    evt.preventDefault()
-    profileName.textContent = nameInput.value
-    profileDescription.textContent = infoInput.value
-    togglePopUp()
-}
-
-editButton.addEventListener('click', function togglePopUp() {
-    popUp.classList.toggle('pop-up_open');
-    if (popUp.classList.contains('pop-up_open')) {
-        nameInput.value = profileName.textContent;
-        infoInput.value = profileDescription.textContent;
+//initial card variable
+const initialCards = [
+    {
+        name: 'Архыз',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+    },
+    {
+        name: 'Челябинская область',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+    },
+    {
+        name: 'Иваново',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+    },
+    {
+        name: 'Камчатка',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+    },
+    {
+        name: 'Холмогорский район',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+    },
+    {
+        name: 'Байкал',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
     }
+];
+
+
+
+
+//Open/close popup feature
+function openPopup (popup) {
+    popup.classList.toggle('pop-up_open');
+}
+
+//Edit button features
+function editButtonHandler (evt) {
+    if(!editPopup.classList.contains('pop-up_open')) {
+        inputName.value = profileName.textContent;
+        inputBio.value = profileBio.textContent;
+    }
+
+    openPopup(editPopup)
+}
+
+function editSubmitHandler (evt) {
+    evt.preventDefault();
+
+    profileName.textContent = inputName.value;
+    profileBio.textContent = inputBio.value;
+
+    openPopup(editPopup);
+}
+
+//Add button features
+
+function addButtonHandler (evt) {
+    inputPlace.value = '';
+    inputLink.value = '';
+
+    openPopup(addPopup);
+}
+
+
+
+
+editButton.addEventListener('click', editButtonHandler);
+addButton.addEventListener('click', addButtonHandler);
+closeEditPopup.addEventListener('click', function () {
+    openPopup(editPopup);
+})
+closeAddPopup.addEventListener('click', function () {
+    openPopup(addPopup);
 });
-addButton.addEventListener('click', togglePopUp);
-closeButton.addEventListener('click', togglePopUp);
-popUpForm.addEventListener('submit', formSubmitHandler);
+
+popupEditForm.addEventListener('submit', editSubmitHandler);
+// popupAddForm.addEventListener('submit', )
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

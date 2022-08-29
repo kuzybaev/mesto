@@ -1,0 +1,9 @@
+.pop-up__input_type_image-source {
+    margin-bottom: 45px;
+}
+
+@media screen and (min-width: 769px){
+    .pop-up__input_type_image-source {
+        margin-bottom: 48px;
+    }
+}

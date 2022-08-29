@@ -32,3 +32,5 @@
 @import url(../blocks/pop-up/pop-up__input/pop-up__input.css);
 @import url(../blocks/pop-up/pop-up__input/_type/pop-up__input_type_name.css);
 @import url(../blocks/pop-up/pop-up__input/_type/pop-up__input_type_info.css);
+@import url(../blocks/pop-up/pop-up__input/_type/pop-up__input_type_place-name.css);
+@import url(../blocks/pop-up/pop-up__input/_type/pop-up__input_type_image-source.css);
