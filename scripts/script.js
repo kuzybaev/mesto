@@ -16,11 +16,18 @@ const addButton = page.querySelector('.btn_type_add');
 const closeEditPopup = editPopup.querySelector('.btn_type_close');
 const closeAddPopup = addPopup.querySelector('.btn_type_close');
 
+
 //inputs variables
 const inputName = editPopup.querySelector('.pop-up__input_type_name');
 const inputBio = editPopup.querySelector('.pop-up__input_type_info');
 const inputPlace = addPopup.querySelector('.pop-up__input_type_place-name');
 const inputLink = addPopup.querySelector('.pop-up__input_type_image-source');
+
+//cards list variable
+const cardsList = page.querySelector('.cards__item');
+
+//template variable
+const cardTemplate = document.querySelector('.card-template');
 
 //initial card variable
 const initialCards = [
@@ -51,6 +58,18 @@ const initialCards = [
 ];
 
 
+//Cards feature
+initialCards.forEach(function (element) {
+    const cardElement = cardTemplate.content.cloneNode(true);
+
+    cardElement.querySelector('.card__title').textContent = element.name;
+    cardElement.querySelector('.card__image').src = element.link;
+
+    const likeButton = cardElement.querySelector('.btn_type_like');
+    likeButton.addEventListener('click', (evt) => evt.target.classList.toggle('btn_type_like-active'));
+
+    cardsList.append(cardElement);
+})
 
 
 //Open/close popup feature
@@ -65,7 +84,7 @@ function editButtonHandler (evt) {
         inputBio.value = profileBio.textContent;
     }
 
-    openPopup(editPopup)
+    openPopup(editPopup);
 }
 
 function editSubmitHandler (evt) {
@@ -87,16 +106,12 @@ function addButtonHandler (evt) {
 }
 
 
-
-
 editButton.addEventListener('click', editButtonHandler);
 addButton.addEventListener('click', addButtonHandler);
-closeEditPopup.addEventListener('click', function () {
-    openPopup(editPopup);
-})
-closeAddPopup.addEventListener('click', function () {
-    openPopup(addPopup);
-});
+closeEditPopup.addEventListener('click',  () =>
+    openPopup(editPopup));
+closeAddPopup.addEventListener('click',  () =>
+    openPopup(addPopup));
 
 popupEditForm.addEventListener('submit', editSubmitHandler);
 // popupAddForm.addEventListener('submit', )
