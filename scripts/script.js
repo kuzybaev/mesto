@@ -20,8 +20,8 @@ const closeAddPopup = addPopup.querySelector('.btn_type_close');
 //inputs variables
 const inputName = editPopup.querySelector('.pop-up__input_type_name');
 const inputBio = editPopup.querySelector('.pop-up__input_type_info');
-const inputPlace = addPopup.querySelector('.pop-up__input_type_place-name');
-const inputLink = addPopup.querySelector('.pop-up__input_type_image-source');
+const inputPlace = popupAddForm.querySelector('.pop-up__input_type_place-name');
+const inputLink = popupAddForm.querySelector('.pop-up__input_type_image-source');
 
 //cards list variable
 const cardsList = page.querySelector('.cards__item');
@@ -59,7 +59,9 @@ const initialCards = [
 
 
 //Cards feature
-initialCards.forEach(function (element) {
+initialCards.forEach(cardHandler);
+
+function cardHandler (element) {
     const cardElement = cardTemplate.content.cloneNode(true);
 
     cardElement.querySelector('.card__title').textContent = element.name;
@@ -67,10 +69,14 @@ initialCards.forEach(function (element) {
 
     const likeButton = cardElement.querySelector('.btn_type_like');
     likeButton.addEventListener('click', (evt) => evt.target.classList.toggle('btn_type_like-active'));
+    const deleteButton = cardElement.querySelector('.btn_type_delete');
+    deleteButton.addEventListener('click', () => {
+        const cardItem = deleteButton.closest('.card');
+        cardItem.remove();
+    })
 
-    cardsList.append(cardElement);
-})
-
+    cardsList.prepend(cardElement);
+}
 
 //Open/close popup feature
 function openPopup (popup) {
@@ -105,6 +111,19 @@ function addButtonHandler (evt) {
     openPopup(addPopup);
 }
 
+function  addSubmitHandler (evt) {
+    evt.preventDefault()
+
+    const newCard = {
+        name: inputPlace.value,
+        link: inputLink.value
+    }
+
+    cardHandler(newCard);
+
+    openPopup(addPopup);
+}
+
 
 editButton.addEventListener('click', editButtonHandler);
 addButton.addEventListener('click', addButtonHandler);
@@ -114,7 +133,7 @@ closeAddPopup.addEventListener('click',  () =>
     openPopup(addPopup));
 
 popupEditForm.addEventListener('submit', editSubmitHandler);
-// popupAddForm.addEventListener('submit', )
+popupAddForm.addEventListener('submit', addSubmitHandler);
 
 
 
