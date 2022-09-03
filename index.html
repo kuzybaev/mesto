@@ -1,118 +1,103 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./pages/index.css">
-	<title>Mesto</title>
-</head>
-<body class="page">
-	<div class="page__container">
-		<header class="header">
-			<a class="header__link" href=#>
-				<img class="header__logo" src="./images/logo.svg" alt="Логотип">
-			</a>
-		</header>
-		<main class="content">
-			<section class="profile">
-				<img src="./images/avatar.jpg" alt="Жак-Ив Кусто" class="profile__image">
-				<div class="profile__info">
-					<h1 class="profile__name">Жак-Ив Кусто</h1>
-					<button class="btn btn_type_edit" type="button"></button>
-					<p class="profile__description">Исследователь океана</p>
-				</div>
-				<button class="btn btn_type_add" type="button"></button>
-			</section>
-			<section class="cards">
-				<ul class="cards__item">
-<!--					<li class="card">-->
-<!--						<button class="btn btn_type_delete" type="button"></button>-->
-<!--						<img class="card__image" src="./images/dmitry-tur-5sPYYR6lG28-unsplash%20(2)%20(1).jpg" alt="Крепость">-->
-<!--						<div class="card__caption">-->
-<!--							<h2 class="card__title">Карачаевск</h2>-->
-<!--							<button class="btn btn_type_like" type="button"></button>-->
-<!--						</div>-->
-<!--					</li>-->
-<!--					<li class="card">-->
-<!--						<button class="btn btn_type_delete" type="button"></button>-->
-<!--						<img class="card__image" src="./images/dmitry-axenov-nIwKbtHfL5w-unsplash%20(1).jpg" alt="Предгорье">-->
-<!--						<div class="card__caption">-->
-<!--							<h2 class="card__title">Гора Эльбрус</h2>-->
-<!--							<button class="btn btn_type_like" type="button"></button>-->
-<!--						</div>-->
-<!--					</li>-->
-<!--					<li class="card">-->
-<!--						<button class="btn btn_type_delete" type="button"></button>-->
-<!--						<img class="card__image" src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Горная вершина">-->
-<!--						<div class="card__caption">-->
-<!--							<h2 class="card__title">Домбай</h2>-->
-<!--							<button class="btn btn_type_like" type="button"></button>-->
-<!--						</div>-->
-<!--					</li>-->
-<!--					<li class="card">-->
-<!--						<button class="btn btn_type_delete" type="button"></button>-->
-<!--						<img class="card__image" src="./images/eugene-chystiakov-kdjSZYccvU0-unsplash%20(1).jpg" alt="Предгорье">-->
-<!--						<div class="card__caption">-->
-<!--							<h2 class="card__title">Гора Казбек</h2>-->
-<!--							<button class="btn btn_type_like" type="button"></button>-->
-<!--						</div>-->
-<!--					</li>-->
-<!--					<li class="card">-->
-<!--						<button class="btn btn_type_delete" type="button"></button>-->
-<!--						<img class="card__image" src="./images/olia-nayda-B782VdHEeC8-unsplash%20(1).jpg" alt="Горная вершина">-->
-<!--						<div class="card__caption">-->
-<!--							<h2 class="card__title">Пятигорск</h2>-->
-<!--							<button class="btn btn_type_like" type="button"></button>-->
-<!--						</div>-->
-<!--					</li>-->
-<!--					<li class="card">-->
-<!--						<button class="btn btn_type_delete" type="button"></button>-->
-<!--						<img class="card__image" src="./images/aisvri-2xPi7XObxxo-unsplash%20(1).jpg" alt="Крепость">-->
-<!--						<div class="card__caption">-->
-<!--							<h2 class="card__title">Карачаево-Черкессия</h2>-->
-<!--							<button class="btn btn_type_like" type="button"></button>-->
-<!--						</div>-->
-<!--					</li>-->
-				</ul>
-			</section>
-		</main>
-		<footer class="footer">
-			<p class="footer__title">&copy; 2022 Mesto Russia</p>
-		</footer>
-	</div>
-	<div class="pop-up pop-up_type_edit">
-		<div class="pop-up__container">
-			<button class="btn btn_type_close" type="button"></button>
-			<h2 class="pop-up__title">Редактировать профиль</h2>
-			<form class="pop-up__form" name="user">
-				<input class="pop-up__input pop-up__input_type_name" placeholder="Имя пользователя" name="username">
-				<input class="pop-up__input pop-up__input_type_info" placeholder="О себе" name="userinfo">
-				<button class="btn btn_type_submit" type="submit">Сохранить</button>
-			</form>
-		</div>
-	</div>
-	<div class="pop-up pop-up_type_add">
-		<div class="pop-up__container">
-			<button class="btn btn_type_close" type="button"></button>
-			<h2 class="pop-up__title">Новое место</h2>
-			<form class="pop-up__form" name="place">
-				<input class="pop-up__input pop-up__input_type_place-name" name="place-name" placeholder="Название" required>
-				<input class="pop-up__input pop-up__input_type_image-source" name="image-source" placeholder="Ссылка на картинку" required>
-				<button class="btn btn_type_submit" type="submit">Создать</button>
-			</form>
-		</div>
-	</div>
-	<template class="card-template">
-		<li class="card">
-			<button class="btn btn_type_delete" type="button"></button>
-			<img class="card__image">
-			<div class="card__caption">
-				<h2 class="card__title"></h2>
-				<button class="btn btn_type_like" type="button"></button>
-			</div>
-		</li>
-	</template>
-	<script src="./scripts/script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Mesto</title>
+  </head>
+  <body class="page">
+    <div class="page__container">
+      <header class="header">
+        <a class="header__link" href="#">
+          <img class="header__logo" src="./images/logo.svg" alt="Логотип" />
+        </a>
+      </header>
+      <main class="content">
+        <section class="profile">
+          <img
+            src="./images/avatar.jpg"
+            alt="Жак-Ив Кусто"
+            class="profile__image"
+          />
+          <div class="profile__info">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <button class="btn btn_type_edit" type="button"></button>
+            <p class="profile__description">Исследователь океана</p>
+          </div>
+          <button class="btn btn_type_add" type="button"></button>
+        </section>
+        <section class="cards">
+          <ul class="cards__item"></ul>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__title">&copy; 2022 Mesto Russia</p>
+      </footer>
+    </div>
+
+    <div class="pop-up pop-up_type_edit">
+      <div class="pop-up__container">
+        <button class="btn btn_type_close" type="button"></button>
+        <h2 class="pop-up__title">Редактировать профиль</h2>
+        <form class="pop-up__form" name="user">
+          <input
+            class="pop-up__input pop-up__input_type_name"
+            placeholder="Имя пользователя"
+            name="username"
+          />
+          <input
+            class="pop-up__input pop-up__input_type_info"
+            placeholder="О себе"
+            name="userinfo"
+          />
+          <button class="btn btn_type_submit" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="pop-up pop-up_type_add">
+      <div class="pop-up__container">
+        <button class="btn btn_type_close" type="button"></button>
+        <h2 class="pop-up__title">Новое место</h2>
+        <form class="pop-up__form" name="place">
+          <input
+            class="pop-up__input pop-up__input_type_place-name"
+            name="place-name"
+            placeholder="Название"
+            required
+          />
+          <input
+            class="pop-up__input pop-up__input_type_image-source"
+            name="image-source"
+            placeholder="Ссылка на картинку"
+            required
+          />
+          <button class="btn btn_type_submit" type="submit">Создать</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="pop-up pop-up_type_image">
+      <figure class="pop-up__figure">
+        <button class="btn btn_type_close" type="button"></button>
+        <img class="pop-up__image" />
+        <figcaption class="pop-up__caption"></figcaption>
+      </figure>
+    </div>
+
+    <template class="card-template">
+      <li class="card">
+        <button class="btn btn_type_delete" type="button"></button>
+        <img class="card__image card__image-button" />
+        <div class="card__caption">
+          <h2 class="card__title"></h2>
+          <button class="btn btn_type_like" type="button"></button>
+        </div>
+      </li>
+    </template>
+
+    <script src="./scripts/script.js"></script>
+  </body>
 </html>
